@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+    app:
+        build: .
+        container_name: technical_test
+        # command: python -u app.py
+        volumes: 
+            - .:/app
+        working_dir: /app
+        environment: 
+            - FLASK_APP=app.py
+            - FLASK_DEBUG=1
+            - FLASK_ENV=development
+        ports: 
+            - "5000:5000"
+        links: 
+            - mongodb
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        environment: 
+            - MONGO_INITDB_DATABASE=test_db
+            # - MONGO_INITDB_ROOT_USERNAME=root
+            # - MONGO_INITDB_ROOT_PASSWORD=pass
+        volumes: 
+            - mongo-data:/data/db
+            - mongo-config:/dada/configdb
+        ports: 
+            - "27017:27017"
+
+volumes: 
+    mongo-data:
+    mongo-config:
+
