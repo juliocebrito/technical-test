@@ -1,10 +1,7 @@
-from time import time
 import unittest
-import importlib
-
+import time
 from app import Transaction
 from utils import trm
-import time
 
 TRM = float(trm(date=time.strftime('%Y-%m-%d'))) 
 
