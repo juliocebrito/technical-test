@@ -16,8 +16,10 @@ Endpoints
 }
 ```
 - [ GET ] /list-users
-- [ GET ] /detail-users/<id>
-- [ PUT ] /update-users/<id>
+
+- [ GET ] /detail-users/{id}
+
+- [ PUT ] /update-users/{id}
 ```javascript
 {
         "user_id": "105398891",
@@ -25,12 +27,12 @@ Endpoints
         "balance": 0
 }
 ```
-- [ DELETE ] /delete-users/<id>
+- [ DELETE ] /delete-users/{id}
+
 - [ POST ] /process-file
 
-FILE PATH
+DATA FILE PATH
 - upload/data.json
-
 
 TEST
 - command: python -m unittest test
