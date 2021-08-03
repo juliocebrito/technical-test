@@ -4,12 +4,12 @@ services:
     app:
         build: .
         container_name: technical_test
-        # command: python -u app.py
+        # command: python -m unittest test
         volumes: 
             - .:/app
         working_dir: /app
         environment: 
-            - FLASK_APP=app.py
+            - FLASK_APP=src/app.py
             - FLASK_DEBUG=1
             - FLASK_ENV=development
         ports: 
