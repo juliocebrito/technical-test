@@ -1,31 +1,36 @@
 # Technical Test
 
-docker-compose up
+Docker
+- docker-compose up
 
 
-endpoints
+Endpoints
 
-/create-user       (POST)
+- [ POST ] /create-user
+```javascript
 {
     "balance": "0",
     "id": "610787399f0f4b54371059b4",
     "pin": 2090,
     "user_id": "105398891"
 }
-/list-users        (GET)
-/detail-users/<id> (GET)
-/update-users/<id> (PUT)
+```
+- [ GET ] /list-users
+- [ GET ] /detail-users/<id>
+- [ PUT ] /update-users/<id>
+```javascript
 {
         "user_id": "105398891",
         "pin": 2090,
         "balance": 0
 }
-/delete-users/<id> (DELETE)
-/process-file      (POST)
+```
+- [ DELETE ] /delete-users/<id>
+- [ POST ] /process-file
 
 FILE PATH
-upload/data.json
+- upload/data.json
 
 
 TEST
-command: python -m unittest test
+- command: python -m unittest test
