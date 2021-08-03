@@ -134,6 +134,9 @@ def process_file():
                 'deposit_money': deposit_money,
                 'withdraw_money': withdraw_money
                 }
+
+            print(result[step['id']])
+
             # else:
             #     raise Exception('User invalid')
 
