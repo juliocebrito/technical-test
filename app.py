@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 
 def validate_account(func):
     """
-    Decarator for validate user account
+    Decorator for validate user account
     """
     def wrapper(*args, **kwargs):
         user = mongo.db.users.find_one({'user_id': args[0].user_id, 'pin': args[0].pin})
