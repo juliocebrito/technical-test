@@ -21,9 +21,9 @@ Endpoints
 - [ PUT ] /update-users/{id}
 ```javascript
 {
-        "user_id": "105398891",
-        "pin": 2090,
-        "balance": 0
+    "user_id": "105398891",
+    "pin": 2090,
+    "balance": 0
 }
 ```
 - [ DELETE ] /delete-users/{id}
